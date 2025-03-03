@@ -2,20 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- Basic Information about the project -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Group ID, Artifact ID, and Version for the project -->
     <groupId>com.example</groupId>
     <artifactId>my-project</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging> <!-- can be 'jar', 'war', etc. -->
+    <packaging>jar</packaging>
 
-    <!-- Project's name and description -->
     <name>My Project</name>
     <description>A simple Maven-based Java project</description>
 
-    <!-- Maven repositories -->
     <repositories>
         <repository>
             <id>central</id>
@@ -23,9 +19,7 @@
         </repository>
     </repositories>
 
-    <!-- Dependencies for your project -->
     <dependencies>
-        <!-- JUnit for testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -33,8 +27,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Add other dependencies here as needed -->
-        <!-- Example: JSON parsing library (Gson) -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -42,19 +34,9 @@
         </dependency>
     </dependencies>
 
-    <!-- Build configuration -->
     <build>
-        <!-- Resources encoding -->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <encoding>UTF-8</encoding>
-            </resource>
-        </resources>
-
-        <!-- Plugins for build configuration -->
         <plugins>
-            <!-- Maven Compiler Plugin to specify Java version -->
+            <!-- Compiler Plugin to set Java version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -62,21 +44,22 @@
                 <configuration>
                     <source>1.8</source> <!-- Java version for source code -->
                     <target>1.8</target> <!-- Java version for compiled code -->
+                    <encoding>UTF-8</encoding> <!-- Set encoding for Java source files -->
                 </configuration>
             </plugin>
 
-            <!-- Maven Resources Plugin for filtering resources -->
+            <!-- Resources Plugin to filter resources -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <encoding>UTF-8</encoding>
+                    <encoding>UTF-8</encoding> <!-- Set encoding for resources -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
+
 
 
